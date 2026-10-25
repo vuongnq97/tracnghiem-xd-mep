@@ -163,21 +163,27 @@ export default function App() {
   // Modal mật khẩu cho tính năng Upload / Download Excel
   const [authModal, setAuthModal] = useState({
     open: false,
-    action: null, // 'upload-click' | 'upload-drop' | 'download'
+    action: null, // 'upload' | 'download'
     file: null,
   });
   const [passwordInput, setPasswordInput] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
 
   const fileInputRef = useRef(null);
   const summaryRef = useRef(null);
-  const verifiedPasswordRef = useRef('');
 
   // Tải bộ đề mới nhất từ API Server (/api/dataset) khi mở trang
   useEffect(() => {
     let cancelled = false;
-    fetch('/api/dataset', { cache: 'no-store' })
+    fetch(`/api/dataset?t=${Date.now()}`, {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache',
+        Pragma: 'no-cache',
+      },
+    })
       .then((r) => (r.ok ? r.json() : null))
       .then((res) => {
         if (
@@ -543,16 +549,16 @@ export default function App() {
   };
 
   // Xử lý Upload file Excel mới & đồng bộ lên Server (/api/dataset -> GitHub)
-  const handleExcelFile = async (file, pwd = verifiedPasswordRef.current) => {
-    if (!file) return;
+  const handleExcelFile = async (file, pwd) => {
+    if (!file) return false;
     try {
       const buffer = await file.arrayBuffer();
       const parsed = parseExcelBuffer(buffer, file.name);
       if (!parsed.sheets || parsed.sheets.length === 0) {
-        alert(
+        setPasswordError(
           'Không tìm thấy câu hỏi hợp lệ trong file Excel! Vui lòng kiểm tra lại định dạng file.'
         );
-        return;
+        return false;
       }
 
       const newDataset = {
@@ -576,7 +582,7 @@ export default function App() {
 
       // Gửi lên API Server của Vercel để kiểm tra pass & lưu vào GitHub Repo
       try {
-        const res = await fetch('/api/dataset', {
+        const res = await fetch(`/api/dataset?t=${Date.now()}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -604,22 +610,14 @@ export default function App() {
           `Đã tải lên thành công "${file.name}" với ${parsed.sheets.length} chuyên đề (${parsed.totalQuestions} câu hỏi).`
         );
       }
+      return true;
     } catch (err) {
       console.error(err);
-      alert('Lỗi khi đọc file Excel: ' + (err.message || 'Định dạng không hợp lệ'));
+      setPasswordError(
+        'Lỗi khi đọc file Excel: ' + (err.message || 'Định dạng không hợp lệ')
+      );
+      return false;
     }
-  };
-
-  const handleRestoreDefault = () => {
-    setDataset(defaultData);
-    setMixedQuestions(generateMixedExamQuestions(defaultData.sheets));
-    setExamStarted(false);
-    setTimeLeft(EXAM_DURATION_SECONDS);
-    setTimeUpModalOpen(false);
-    setActiveSheetName(defaultData.sheets[0]?.name || '');
-    setSheetStates({});
-    setResultFilter('all');
-    setUploadNotice(null);
   };
 
   const handleClearHistory = () => {
@@ -634,18 +632,23 @@ export default function App() {
     setPasswordInput('');
     setPasswordError('');
     setShowPassword(false);
+    setIsUploading(false);
     setAuthModal({ open: true, action, file });
   };
 
   const closeAuthModal = () => {
+    if (isUploading) return;
     setAuthModal({ open: false, action: null, file: null });
     setPasswordInput('');
     setPasswordError('');
     setShowPassword(false);
+    setIsUploading(false);
   };
 
-  const handleVerifyPassword = (e) => {
+  const handleVerifyPassword = async (e) => {
     e.preventDefault();
+    if (isUploading) return;
+
     if (!verifyExcelPassword(passwordInput)) {
       setPasswordError('Mật khẩu không chính xác. Vui lòng thử lại!');
       return;
@@ -653,14 +656,26 @@ export default function App() {
 
     const { action, file } = authModal;
     const pwd = passwordInput;
-    verifiedPasswordRef.current = pwd;
-    closeAuthModal();
 
-    if (action === 'upload-click') {
-      fileInputRef.current?.click();
-    } else if (action === 'upload-drop' && file) {
-      handleExcelFile(file, pwd);
-    } else if (action === 'download') {
+    if (action === 'upload') {
+      if (!file) {
+        setPasswordError('Vui lòng chọn file Excel (.xlsx, .xls) cần tải lên!');
+        return;
+      }
+      setIsUploading(true);
+      setPasswordError('');
+      const ok = await handleExcelFile(file, pwd);
+      setIsUploading(false);
+      if (ok) {
+        setAuthModal({ open: false, action: null, file: null });
+        setPasswordInput('');
+        setShowPassword(false);
+      }
+      return;
+    }
+
+    if (action === 'download') {
+      closeAuthModal();
       exportDatasetToExcel(dataset);
     }
   };
@@ -822,13 +837,18 @@ export default function App() {
             style={{ display: 'none' }}
             onChange={(e) => {
               const file = e.target.files?.[0];
-              if (file) handleExcelFile(file);
+              if (file) {
+                requestProtectedAction('upload', file);
+              }
               e.target.value = '';
             }}
           />
           <div
             className={`upload-zone ${isDragging ? 'dragging' : ''}`}
-            onClick={() => requestProtectedAction('upload-click')}
+            onClick={() => {
+              requestProtectedAction('upload', null);
+              fileInputRef.current?.click();
+            }}
             onDragOver={(e) => {
               e.preventDefault();
               setIsDragging(true);
@@ -838,7 +858,7 @@ export default function App() {
               e.preventDefault();
               setIsDragging(false);
               const file = e.dataTransfer.files?.[0];
-              if (file) requestProtectedAction('upload-drop', file);
+              if (file) requestProtectedAction('upload', file);
             }}
           >
             <Upload size={20} style={{ color: '#60a5fa', margin: '0 auto' }} />
@@ -863,17 +883,6 @@ export default function App() {
                 <Download size={13} />
                 <span>Tải file đề</span>
               </button>
-              {dataset.fileName !== defaultData.fileName && (
-                <button
-                  type="button"
-                  className="btn-sidebar-sm"
-                  onClick={handleRestoreDefault}
-                  title="Khôi phục bộ đề mặc định"
-                >
-                  <RotateCcw size={13} />
-                  <span>Đề gốc</span>
-                </button>
-              )}
             </div>
           </div>
         </div>
@@ -1834,18 +1843,21 @@ export default function App() {
               </div>
               <div style={{ flex: 1 }}>
                 <h3 id="modal-auth-title" className="modal-title">
-                  Yêu cầu mật khẩu
+                  {authModal.action === 'download'
+                    ? 'Tải xuống bộ đề Excel'
+                    : 'Cập nhật file Excel đề thi'}
                 </h3>
                 <p className="modal-subtitle">
                   {authModal.action === 'download'
                     ? 'Nhập mật khẩu để tải xuống file Excel đề thi'
-                    : 'Nhập mật khẩu để tải lên (Upload) file Excel đề thi'}
+                    : 'Chọn file Excel (.xlsx) và nhập mật khẩu để cập nhật hệ thống'}
                 </p>
               </div>
               <button
                 type="button"
                 className="modal-close-btn"
                 onClick={closeAuthModal}
+                disabled={isUploading}
                 aria-label="Đóng"
               >
                 <X size={18} />
@@ -1853,13 +1865,95 @@ export default function App() {
             </div>
 
             <form onSubmit={handleVerifyPassword} className="modal-form">
+              {authModal.action === 'upload' && (
+                <div style={{ marginBottom: 4 }}>
+                  <label
+                    htmlFor="modal-excel-file-picker"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: 10,
+                      padding: '10px 12px',
+                      borderRadius: 10,
+                      border: authModal.file
+                        ? '1.5px solid #2563eb'
+                        : '1.5px dashed #94a3b8',
+                      backgroundColor: authModal.file ? '#eff6ff' : '#f8fafc',
+                      cursor: isUploading ? 'not-allowed' : 'pointer',
+                      fontSize: 13,
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 8,
+                        minWidth: 0,
+                        flex: 1,
+                      }}
+                    >
+                      <FileSpreadsheet
+                        size={18}
+                        style={{
+                          color: authModal.file ? '#2563eb' : '#64748b',
+                          flexShrink: 0,
+                        }}
+                      />
+                      <span
+                        style={{
+                          fontWeight: 600,
+                          color: authModal.file ? '#1e3a8a' : '#475569',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {authModal.file
+                          ? authModal.file.name
+                          : 'Nhấn vào đây để chọn file Excel (.xlsx)...'}
+                      </span>
+                    </div>
+                    <span
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 600,
+                        color: '#2563eb',
+                        backgroundColor: '#dbeafe',
+                        padding: '4px 8px',
+                        borderRadius: 6,
+                        flexShrink: 0,
+                      }}
+                    >
+                      {authModal.file ? 'Đổi file' : 'Chọn file'}
+                    </span>
+                  </label>
+                  <input
+                    id="modal-excel-file-picker"
+                    type="file"
+                    accept=".xlsx,.xls"
+                    disabled={isUploading}
+                    style={{ display: 'none' }}
+                    onChange={(e) => {
+                      const f = e.target.files?.[0];
+                      if (f) {
+                        setAuthModal((prev) => ({ ...prev, file: f }));
+                        if (passwordError) setPasswordError('');
+                      }
+                      e.target.value = '';
+                    }}
+                  />
+                </div>
+              )}
+
               <div className="password-input-wrapper">
                 <input
                   type={showPassword ? 'text' : 'password'}
                   className="modal-input"
                   style={{ paddingRight: '42px' }}
-                  placeholder="Nhập mật khẩu..."
+                  placeholder="Nhập mật khẩu quản trị..."
                   value={passwordInput}
+                  disabled={isUploading}
                   onChange={(e) => {
                     setPasswordInput(e.target.value);
                     if (passwordError) setPasswordError('');
@@ -1888,11 +1982,20 @@ export default function App() {
                   type="button"
                   className="btn btn-outline"
                   onClick={closeAuthModal}
+                  disabled={isUploading}
                 >
                   Hủy
                 </button>
-                <button type="submit" className="btn btn-primary">
-                  Xác nhận
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={isUploading}
+                >
+                  {isUploading
+                    ? 'Đang tải lên hệ thống...'
+                    : authModal.action === 'upload'
+                    ? 'Xác nhận & Tải lên'
+                    : 'Xác nhận'}
                 </button>
               </div>
             </form>

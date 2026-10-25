@@ -1,18 +1,32 @@
 import * as XLSX from 'xlsx';
 
 /**
- * Chuẩn hóa giá trị cột G ("Đáp án đúng") về A, B, C, D
+ * Chuẩn hóa giá trị cột đáp án (G hoặc H) về A, B, C, D
  */
-function normalizeAnswerKey(rawG, validKeys, prevAns = null) {
-  const cleaned = String(rawG ?? '').trim().toUpperCase();
-  if (validKeys.includes(cleaned)) {
-    return { key: cleaned, wasRandom: false };
-  }
+function normalizeAnswerKey(rawG, rawH, options, validKeys, prevAns = null) {
   const numMap = { '1': 'A', '2': 'B', '3': 'C', '4': 'D' };
-  if (numMap[cleaned] && validKeys.includes(numMap[cleaned])) {
-    return { key: numMap[cleaned], wasRandom: false };
+
+  for (const candidate of [rawG, rawH]) {
+    const cleaned = String(candidate ?? '').trim();
+    if (!cleaned) continue;
+
+    const upper = cleaned.toUpperCase();
+    if (validKeys.includes(upper)) {
+      return { key: upper, wasRandom: false };
+    }
+    if (numMap[upper] && validKeys.includes(numMap[upper])) {
+      return { key: numMap[upper], wasRandom: false };
+    }
+    // Đối chiếu nếu cột G hoặc H ghi nội dung chữ của đáp án đúng
+    const matchedOpt = options.find(
+      (o) => o.text.trim().toLowerCase() === cleaned.toLowerCase()
+    );
+    if (matchedOpt) {
+      return { key: matchedOpt.key, wasRandom: false };
+    }
   }
-  // Nếu câu hỏi trong file Excel upload lên chưa có cột G hoặc cột G trống -> random A, B, C, D
+
+  // Nếu câu hỏi trong file Excel upload lên chưa có đáp án -> chọn A, B, C, D
   const pool = validKeys.filter((k) => k !== prevAns);
   const choices = pool.length > 0 ? pool : validKeys;
   const randomKey = choices[Math.floor(Math.random() * choices.length)];
@@ -30,11 +44,16 @@ export function parseExcelBuffer(arrayBuffer, fileName = 'Bo-de-trac-nghiem.xlsx
 
   for (const sheetName of workbook.SheetNames) {
     const worksheet = workbook.Sheets[sheetName];
-    if (!worksheet) continue;
+    if (!worksheet || !worksheet['!ref']) continue;
+
+    // Giới hạn chỉ đọc tối đa từ cột A đến cột I (0..8) để tránh treo máy khi file Excel bị tràn cột tới XFD
+    const range = XLSX.utils.decode_range(worksheet['!ref']);
+    range.e.c = Math.min(range.e.c, 8);
 
     const rows = XLSX.utils.sheet_to_json(worksheet, {
       header: 'A',
       defval: '',
+      range,
     });
 
     let currentSection = '';
@@ -50,6 +69,7 @@ export function parseExcelBuffer(arrayBuffer, fileName = 'Bo-de-trac-nghiem.xlsx
       const e = String(r.E ?? '').trim();
       const f = String(r.F ?? '').trim();
       const g = String(r.G ?? '').trim();
+      const h = String(r.H ?? '').trim();
 
       if (!a && !b && !c && !d && !e && !f) continue;
 
@@ -80,7 +100,13 @@ export function parseExcelBuffer(arrayBuffer, fileName = 'Bo-de-trac-nghiem.xlsx
       // Dòng câu hỏi hợp lệ
       if (b && options.length >= 2) {
         const validKeys = options.map((o) => o.key);
-        const { key: correctAnswer, wasRandom } = normalizeAnswerKey(g, validKeys, prevAns);
+        const { key: correctAnswer, wasRandom } = normalizeAnswerKey(
+          g,
+          h,
+          options,
+          validKeys,
+          prevAns
+        );
         prevAns = correctAnswer;
         if (wasRandom) autoFilledCount += 1;
 
