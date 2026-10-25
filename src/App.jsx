@@ -591,23 +591,34 @@ export default function App() {
             dataset: newDataset,
           }),
         });
-        const data = await res.json();
-        if (res.ok && data.ok && data.savedToServer) {
+        const rawText = await res.text();
+        let data = null;
+        try {
+          data = rawText ? JSON.parse(rawText) : null;
+        } catch {
+          data = null;
+        }
+
+        if (res.ok && data?.ok && data.savedToServer) {
           setUploadNotice(
             `Đã tải lên thành công "${file.name}" (${parsed.sheets.length} chuyên đề, ${parsed.totalQuestions} câu hỏi) và cập nhật lên hệ thống cho toàn bộ người dùng!`
           );
-        } else if (res.ok && data.missingToken) {
+        } else if (res.ok && data?.missingToken) {
           setUploadNotice(
             `Đã tải lên "${file.name}" (${parsed.sheets.length} chuyên đề, ${parsed.totalQuestions} câu hỏi). Lưu ý: Hãy thêm biến môi trường GITHUB_TOKEN trên Vercel để tự động lưu vĩnh viễn vào GitHub.`
           );
         } else {
           setUploadNotice(
-            `Đã tải lên "${file.name}" (${parsed.sheets.length} chuyên đề, ${parsed.totalQuestions} câu hỏi). ${data.error || ''}`
+            `Đã đọc "${file.name}" (${parsed.sheets.length} chuyên đề, ${parsed.totalQuestions} câu hỏi) nhưng chưa lưu được lên Server (HTTP ${res.status}): ${
+              data?.error || rawText?.slice(0, 120) || 'Lỗi không xác định'
+            }`
           );
         }
-      } catch {
+      } catch (apiErr) {
         setUploadNotice(
-          `Đã tải lên thành công "${file.name}" với ${parsed.sheets.length} chuyên đề (${parsed.totalQuestions} câu hỏi).`
+          `Đã đọc "${file.name}" (${parsed.sheets.length} chuyên đề, ${parsed.totalQuestions} câu hỏi) tại trình duyệt. Không thể kết nối API đồng bộ: ${
+            apiErr?.message || ''
+          }`
         );
       }
       return true;

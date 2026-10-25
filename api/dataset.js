@@ -44,7 +44,7 @@ export default async function handler(req, res) {
       let refToFetch = GITHUB_BRANCH;
       const refRes = await fetch(
         `https://api.github.com/repos/${GITHUB_REPO}/commits/${GITHUB_BRANCH}?t=${Date.now()}`,
-        { headers, cache: 'no-store' }
+        { headers }
       );
       if (refRes.ok) {
         const refData = await refRes.json();
@@ -56,7 +56,7 @@ export default async function handler(req, res) {
       // Bước 2: Tải nội dung file theo SHA mới nhất
       const ghRes = await fetch(
         `https://api.github.com/repos/${GITHUB_REPO}/contents/${TARGET_FILE_PATH}?ref=${refToFetch}&t=${Date.now()}`,
-        { headers, cache: 'no-store' }
+        { headers }
       );
 
       if (ghRes.ok) {
@@ -123,7 +123,7 @@ export default async function handler(req, res) {
         });
       }
 
-      const contentStr = JSON.stringify(dataset, null, 2);
+      const contentStr = JSON.stringify(dataset);
       const token = (process.env.GITHUB_TOKEN || '').trim();
 
       // 1. Nếu có GITHUB_TOKEN (trên Vercel) -> Commit thẳng vào repo GitHub
@@ -138,10 +138,23 @@ export default async function handler(req, res) {
             'Cache-Control': 'no-cache, no-store',
           };
 
+          // Lấy commit SHA mới nhất của nhánh main để tránh lệch SHA (409 Conflict)
+          let latestRef = GITHUB_BRANCH;
+          const commitRes = await fetch(
+            `https://api.github.com/repos/${GITHUB_REPO}/commits/${GITHUB_BRANCH}?t=${Date.now()}`,
+            { headers }
+          );
+          if (commitRes.ok) {
+            const commitJson = await commitRes.json();
+            if (commitJson && commitJson.sha) {
+              latestRef = commitJson.sha;
+            }
+          }
+
           // Lấy SHA hiện tại của file trên GitHub
           const getRes = await fetch(
-            `${apiUrl}?ref=${GITHUB_BRANCH}&t=${Date.now()}`,
-            { headers, cache: 'no-store' }
+            `${apiUrl}?ref=${latestRef}&t=${Date.now()}`,
+            { headers }
           );
           let currentSha = undefined;
           if (getRes.ok) {
