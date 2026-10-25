@@ -42,7 +42,15 @@ export function parseExcelBuffer(arrayBuffer, fileName = 'Bo-de-trac-nghiem.xlsx
   let totalQuestions = 0;
   let autoFilledCount = 0;
 
-  for (const sheetName of workbook.SheetNames) {
+  const sheetMetaList = workbook.Workbook?.Sheets || [];
+
+  for (let sIdx = 0; sIdx < workbook.SheetNames.length; sIdx++) {
+    const sheetName = workbook.SheetNames[sIdx];
+    // Bỏ qua các sheet đang bị Ẩn (Hide / VeryHidden) trong file Excel
+    if (sheetMetaList[sIdx] && sheetMetaList[sIdx].Hidden) {
+      continue;
+    }
+
     const worksheet = workbook.Sheets[sheetName];
     if (!worksheet || !worksheet['!ref']) continue;
 
