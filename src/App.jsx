@@ -244,7 +244,7 @@ export default function App() {
   const currentSheet = useMemo(() => {
     if (isMixedExam) {
       return {
-        name: 'Đề thi sát hạch XD-MEP (Trộn ngẫu nhiên 20 câu)',
+        name: 'Đề thi sát hạch chuyên môn MEP',
         key: MIXED_EXAM_KEY,
         questions: mixedQuestions,
         isMixed: true,
@@ -358,7 +358,7 @@ export default function App() {
       id: Date.now(),
       timestamp: new Date().toLocaleString('vi-VN'),
       examTitle: isMixedExam
-        ? 'Đề thi trộn ngẫu nhiên (20 câu • 30 phút)'
+        ? 'Đề thi sát hạch chuyên môn MEP'
         : currentSheet.name,
       isMixedExam,
       isAutoTimeout: timeLeft === 0 && isMixedExam,
@@ -1278,7 +1278,7 @@ export default function App() {
                 <Target size={36} />
               </div>
               <h2 className="exam-start-title">
-                Đề thi sát hạch chuyên môn XD-MEP
+                Đề thi sát hạch chuyên môn MEP
               </h2>
               <p className="exam-start-desc">
                 Hệ thống sẽ trộn ngẫu nhiên <strong>20 câu hỏi</strong> từ ngân hàng đề
@@ -1642,32 +1642,6 @@ export default function App() {
 
             {/* BẢNG ĐIỀU HƯỚNG CÂU HỎI BÊN PHẢI */}
             <aside className="navigator-card" aria-label="Bảng danh sách câu hỏi">
-              {isMixedExam && (
-                <div className="navigator-timer-box">
-                  <div style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>
-                    Thời gian còn lại (30P)
-                  </div>
-                  <div
-                    style={{
-                      fontSize: 22,
-                      fontWeight: 800,
-                      color:
-                        timeLeft <= 60
-                          ? '#dc2626'
-                          : timeLeft <= 300
-                          ? '#d97706'
-                          : '#0f172a',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 6,
-                    }}
-                  >
-                    <Clock size={18} />
-                    <span>{formatTimeMMSS(timeLeft)}</span>
-                  </div>
-                </div>
-              )}
-
               <div className="navigator-title">
                 <span>Bảng câu hỏi ({stats.answered}/{stats.total})</span>
                 <HelpCircle size={15} style={{ color: '#64748b' }} />
