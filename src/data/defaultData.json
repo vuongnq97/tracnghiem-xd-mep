@@ -3236,7 +3236,7 @@
               "text": "Theo kinh nghiệm"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "3. PHẦN CẤP THOÁT NƯỚC"
         },
         {
@@ -4679,7 +4679,7 @@
               "text": "30 cm"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4700,7 +4700,7 @@
               "text": "≤ 2%"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4725,7 +4725,7 @@
               "text": "Không có sai số"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4750,7 +4750,7 @@
               "text": "Không có tiêu chuẩn riêng, tuân theo thiết kế và quy chuẩn xây dựng."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4775,7 +4775,7 @@
               "text": "+ Dung trọng\r\n+ Hàm lượng cát\r\n+ Độ pH"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4821,7 +4821,7 @@
               "text": "Kiểm tra thứ tự lồng, cao độ cố định, liên kết mối nối đúng thiết kế/BPTC; thử nước kiểm tra độ kín ống siêu âm và ống khoan lõi sau mỗi đợt hạ."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4846,7 +4846,7 @@
               "text": "Nhỏ hơn 30 cm."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4871,7 +4871,7 @@
               "text": "D≤1000 mm: 3 vị trí; D≥2000 mm: 4 vị trí."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4917,7 +4917,7 @@
               "text": "Đạt vì đã đo đủ 2 vị trí và có một kết quả dưới 5 cm."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "I - Cọc khoan nhồi và tường vây"
         },
         {
@@ -4938,7 +4938,7 @@
               "text": "≤ 20 mm"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": "II - Cọc ép"
         },
         {
@@ -4959,7 +4959,7 @@
               "text": "≤ 5 cm/s"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "II - Cọc ép"
         },
         {
@@ -4984,7 +4984,7 @@
               "text": "Không có quy định về việc này."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": "II - Cọc ép"
         },
         {
@@ -5009,7 +5009,7 @@
               "text": "Bao gồm tất cả các yêu cầu trên."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "II - Cọc ép"
         },
         {
@@ -5084,7 +5084,7 @@
               "text": "Chỉ kiểm tra khi phát hiện cọc bị nghiêng."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "II - Cọc ép"
         },
         {
@@ -5109,7 +5109,7 @@
               "text": "Đường hàn phải đúng quy cách, đồng đều, liền mạch và không có khuyết tật."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": "II - Cọc ép"
         },
         {
@@ -5159,7 +5159,7 @@
               "text": "Chỉ kiểm tra tim cọc và chất lượng bản mã."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": "II - Cọc ép"
         },
         {
@@ -5184,7 +5184,7 @@
               "text": "Pep(kt) không cần nằm trong giới hạn nếu chiều dài đạt thiết kế."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": "II - Cọc ép"
         },
         {
@@ -5209,7 +5209,7 @@
               "text": "Vận tốc xuyên ≤2 cm/s trên chiều sâu không ít hơn 2D."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "II - Cọc ép"
         },
         {
@@ -5234,7 +5234,7 @@
               "text": "Kết luận cọc đạt vì lực ép đã đạt Pmax."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "II - Cọc ép"
         },
         {
@@ -5309,7 +5309,7 @@
               "text": "≤ 1,0 mm"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5334,7 +5334,7 @@
               "text": "Cứ 200 m³ lấy 1 tổ mẫu."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5359,7 +5359,7 @@
               "text": "Kích thước hình học, hoàn công cao độ, bề mặt bê tông, sửa chữa khuyết tật và kết quả thí nghiệm."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5384,7 +5384,7 @@
               "text": "Mọi nhịp đều được tháo khi đạt 70% R28."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5409,7 +5409,7 @@
               "text": "Căn cứ đề xuất của nhà thầu thi công."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5434,7 +5434,7 @@
               "text": "Tưới nước lên bề mặt sau khi bê tông đông kết."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5459,7 +5459,7 @@
               "text": "Sử dụng máy đo nhiệt độ tại thời điểm kết thúc đổ bê tông."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5484,7 +5484,7 @@
               "text": "Chấp thuận tập kết vật liệu nếu bề mặt không bị võng."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5534,7 +5534,7 @@
               "text": "TCVN 13662 : 2023 – Tiêu chuẩn bắt buộc áp dụng từng phần – Kết cấu bê tông và bê tông cốt thép toàn khối – Quy phạm thi công và nghiệm thu."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5559,7 +5559,7 @@
               "text": "Tất cả các ý trên."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5584,7 +5584,7 @@
               "text": "Chấp nhận bám dính bê tông cũ vì sẽ đổ bê tông bao lấp."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5634,7 +5634,7 @@
               "text": "Chỉ cần khớp hết bước ren"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5659,7 +5659,7 @@
               "text": "Chỉ cần kiểm tra số lượng thanh thép trong cấu kiện."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5734,7 +5734,7 @@
               "text": "Từ chối nghiệm thu; yêu cầu kiểm tra chủng loại, kích thước ren, hồ sơ chất lượng và sự phù hợp với yêu cầu được duyệt."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5776,7 +5776,7 @@
               "text": "Kích thước hình học ±10 mm; cao độ ±10 mm."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5801,7 +5801,7 @@
               "text": "Chỉ kiểm tra khả năng chịu lực của từng cây chống riêng lẻ."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5826,7 +5826,7 @@
               "text": "Chân chống phải được kê đệm chắc chắn, cố định; cây chống không nghiêng, vẹo và bảo đảm ổn định."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5851,7 +5851,7 @@
               "text": "Tim trục ±5 mm; cao độ ±20 mm."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5872,7 +5872,7 @@
               "text": "Đồng ý nghiệm thu vì mã hiệu và vị trí các tấm đã đúng; các vị trí khóa lỏng không ảnh hưởng tới quá trình đổ bê tông."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5897,7 +5897,7 @@
               "text": "Tất cả các ý trên."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5947,7 +5947,7 @@
               "text": "Chỉ bố trí tại điểm cao nhất của đường cáp."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5972,7 +5972,7 @@
               "text": "Kiểm tra đủ số lượng, đúng vị trí và thông số kỹ thuật theo BPTC được duyệt."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -5997,7 +5997,7 @@
               "text": "Chỉ kiểm tra lực kéo căng theo kinh nghiệm của đơn vị thi công."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6047,7 +6047,7 @@
               "text": "+20 mm, −0 mm; không cho phép thấp hơn cao độ thiết kế.G66"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6097,7 +6097,7 @@
               "text": "Kẻ vạch sơn màu thẳng hàng qua bu lông, đai ốc và bản mã để kiểm soát chuyển vị sau khi siết."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6122,7 +6122,7 @@
               "text": "Chỉ cần kiểm tra chiều dài đường hàn, không cần kiểm tra khuyết tật."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6147,7 +6147,7 @@
               "text": "Được neo chặt, đủ số lượng, đúng khoảng cách theo bản vẽ."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6172,7 +6172,7 @@
               "text": "Không cần hàng chân cơ, xác định theo bật mực định vị"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6197,7 +6197,7 @@
               "text": "Tất cả các nội dung trên."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6247,7 +6247,7 @@
               "text": "Chỉ cần kiểm tra tường không bị nứt lớn."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6272,7 +6272,7 @@
               "text": "Áp dụng theo Biện pháp thi công và Shopdrawing được phê duyệt"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6297,7 +6297,7 @@
               "text": "Không cần nghiệm thu mốc"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6318,7 +6318,7 @@
               "text": "Không quá 28 mm."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6343,7 +6343,7 @@
               "text": "Chỉ cần đóng lưới tại các vị trí đã xuất hiện vết nứ"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6368,7 +6368,7 @@
               "text": "Chỉ cần tưới nước tại vị trí tiếp giáp với cột bê tông."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6393,7 +6393,7 @@
               "text": "Độ phẳng ≤3 mm/2 m; độ thẳng đứng ≤10 mm trên chiều cao từ sàn đến trần."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6443,7 +6443,7 @@
               "text": "Sau 48 giờ tiến hành phun ẩm."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6539,7 +6539,7 @@
               "text": "Chỉ cần quét qua là đủ"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6564,7 +6564,7 @@
               "text": "Chỉ thực hiện khi có yêu cầu kiểm tra, nghiệm thu từ nhà thầu"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6589,7 +6589,7 @@
               "text": "Có thể thiếu một vài mốc vẫn thi công"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6614,7 +6614,7 @@
               "text": "Cửa chỉ cần đóng kín khi có nhân viên vận hành."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6639,7 +6639,7 @@
               "text": "Không cần chèn bịt nếu đường ống đã được cố định chắc chắn."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6664,7 +6664,7 @@
               "text": "Đảm bảo đảm kích thước và màu sắc giống thiết kế."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6689,7 +6689,7 @@
               "text": "Hướng mở cửa phải phù hợp quy định và hồ sơ thiết kế được duyệt."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6714,7 +6714,7 @@
               "text": "Kiểm tra chiều rộng cửa thoát nạn, không cần kiểm tra hành lang."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6739,7 +6739,7 @@
               "text": "Chấp thuận nếu bố trí thêm biển chỉ dẫn thoát nạn."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6764,7 +6764,7 @@
               "text": "Kiểm tra giới hạn chịu lửa ghi trên nhãn cửa."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6814,7 +6814,7 @@
               "text": "Chuẩn bị bề mặt (vật tư, bề mặt) → bả lớp 1 → bả lớp 2 → xả bả, vệ sinh → sơn lót → sơn hoàn thiện từng lớp"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6839,7 +6839,7 @@
               "text": "Chỉ đo khi có nghi ngờ tường ẩm"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6864,7 +6864,7 @@
               "text": "Tay nghề thợ thi công"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6889,7 +6889,7 @@
               "text": "Không có yêu cầu cụ thể, tùy theo cán bộ giám sát"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6914,7 +6914,7 @@
               "text": "Chỉ kiểm tra cao độ lỗ mở/hố thăm trần"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6939,7 +6939,7 @@
               "text": "Theo yêu cầu của Chủ đầu tư"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -6964,7 +6964,7 @@
               "text": "Dùng thước kẹp"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -7014,7 +7014,7 @@
               "text": "Mạch thẳng, chênh cao giữa 2 viên cạnh nhau không quá 3mm, viên sứt/nứt (nếu có) phải nằm ở vị trí khuất tầm nhìn, khó phát hiện"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -7039,7 +7039,7 @@
               "text": "Chỉ cần quan sát bằng mắt thường để đánh giá hướng dốc."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -7064,7 +7064,7 @@
               "text": "< 0,1mm"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -7089,7 +7089,7 @@
               "text": "Màu sắc đồng đều"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         },
         {
@@ -7114,7 +7114,7 @@
               "text": "Nước chảy và loang thấm trên bề mặt đá"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": "III - Bê tông, ván khuôn, cốt thép"
         }
       ]
@@ -7144,7 +7144,7 @@
               "text": "Gồm tất cả các yêu cầu nêu trên"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7169,7 +7169,7 @@
               "text": "Không cần kiểm tra từng phương tiện, chỉ cần kiểm tra ngẫu nhiên định kỳ."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7194,7 +7194,7 @@
               "text": "Căn cứ vào báo cáo kết quả thí nghiệm của nhà thầu mà không cần kiểm tra trực tiếp hiện trường."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7219,7 +7219,7 @@
               "text": "Độ chặt đạt K98 đối với toàn bộ lớp san lấp."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -7269,7 +7269,7 @@
               "text": "Bao gồm tất cả các nội dung trên."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -7294,7 +7294,7 @@
               "text": "Tất cả các yêu cầu trên"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7319,7 +7319,7 @@
               "text": "Không quy định sai số, miễn đường thẳng đều là được"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7344,7 +7344,7 @@
               "text": "Tùy theo cấp hạng công trình, không có quy định cụ thể."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -7369,7 +7369,7 @@
               "text": "Không cần chia thành từng lớp khi đắp nền"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7419,7 +7419,7 @@
               "text": "Chỉ kiểm tra một số đoạn ngẫu nhiên, không cần toàn tuyến."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7444,7 +7444,7 @@
               "text": "Kiểm tra chiều rộng trải vải, độ bằng phẳng, hướng/chiều thi công; Kiểm tra chiều rộng mối nối, đường khâu và gấp mép theo thiết kế (nếu có)."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7469,7 +7469,7 @@
               "text": "Hướng nào cũng được tùy vào địa hình."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7494,7 +7494,7 @@
               "text": "Lấy tại vị trí tiếp giáp giữa hai lớp vải địa kỹ thuật."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7519,7 +7519,7 @@
               "text": "Tất cả các nội dung trên"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -7544,7 +7544,7 @@
               "text": "±15 mm so với thiết kế."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7569,7 +7569,7 @@
               "text": "Tất cả các yêu cầu trên."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7594,7 +7594,7 @@
               "text": "Không quy định sai số, chỉ cần đúng vị trí tương đối"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -7619,7 +7619,7 @@
               "text": "Tất cả các yêu cầu trên."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7644,7 +7644,7 @@
               "text": "Chỉ kiểm tra ngẫu nhiên một số mối nối, không cần toàn bộ."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -7669,7 +7669,7 @@
               "text": "Đắp tùy ý miễn sao lớp cuối cùng đạt cao độ thiết kế."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7694,7 +7694,7 @@
               "text": "Chỉ cần đắp phủ kín cống, không yêu cầu kiểm tra độ chặt."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -7719,7 +7719,7 @@
               "text": "Không cần kiểm tra độ chặt, chỉ cần đảm bảo cao độ và hình học thiết kế."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -7744,7 +7744,7 @@
               "text": "Bao gồm tất cả các yêu cầu trên."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7769,7 +7769,7 @@
               "text": "Tất cả các mục trên"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -7794,7 +7794,7 @@
               "text": "Không ảnh hưởng"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7819,7 +7819,7 @@
               "text": "Độ ổn định Marshall và độ rỗng dư."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7844,7 +7844,7 @@
               "text": "Tất cả các đáp án đều sai"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -7894,7 +7894,7 @@
               "text": "Kiểm tra bằng mắt thường và quan sát bề mặt sau khi lu lèn"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -7919,7 +7919,7 @@
               "text": "Không giới hạn sai số, chỉ cần lớp đá phủ kín toàn bộ mặt đường"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -7944,7 +7944,7 @@
               "text": "±20 mm, miễn không nhỏ hơn thiết kế"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -7969,7 +7969,7 @@
               "text": "Mật độ kiểm tra: 1 vị trí/8000 m²."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8019,7 +8019,7 @@
               "text": "Kiểm tra ngẫu nhiên vài trắc ngang trên tuyến, không cần đo toàn bộ chiều dài."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8044,7 +8044,7 @@
               "text": "Tất cả các phương án trên đều sai."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -8069,7 +8069,7 @@
               "text": "0,15kg"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8090,7 +8090,7 @@
               "text": "Miễn thí nghiệm đối với Cấp\r\nphối đá dăm dùng làm thi công móng lớp dưới trong thi công đường trong khu đô thị"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8115,7 +8115,7 @@
               "text": "≥110 °C"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -8165,7 +8165,7 @@
               "text": "Tất cả các nội dung nêu trên"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -8190,7 +8190,7 @@
               "text": "Lu hoàn thiện → lu chặt → lu sơ bộ"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8215,7 +8215,7 @@
               "text": "Không quan trọng, chỉ cần lu lèn đạt độ chặt là được"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -8240,7 +8240,7 @@
               "text": "Cứ 100 mét dọc tuyến, kiểm tra 1 vị trí"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8265,7 +8265,7 @@
               "text": "Quan sát bằng mắt thường và đánh giá cảm quan."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8340,7 +8340,7 @@
               "text": "Quan sát bề mặt và ước lượng chiều dày bằng mắt thường."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8490,7 +8490,7 @@
               "text": "Sai số ±5 % so với thiết kế."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8515,7 +8515,7 @@
               "text": "Chỉ quan sát bằng mắt thường, không cần đo kiểm chi tiết."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8540,7 +8540,7 @@
               "text": "Không cần tham chiếu tiêu chuẩn, chỉ dựa vào hồ sơ thiết kế."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -8607,7 +8607,7 @@
               "text": "Tất cả các phương án trên"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8632,7 +8632,7 @@
               "text": "Kiểm tra kích thước, cao độ, độ dốc, khoảng cách và khả năng tiếp cận công trình của xe chữa cháy theo thiết kế được duyệt."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -8657,7 +8657,7 @@
               "text": "Chỉ cần bảo đảm bãi đỗ có đủ diện tích."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8682,7 +8682,7 @@
               "text": "Chấp thuận vì bồn cây thuộc hạng mục cảnh quan."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -8707,7 +8707,7 @@
               "text": "Được neo chặt, đủ số lượng, đúng khoảng cách theo bản vẽ."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8732,7 +8732,7 @@
               "text": "Không cần hàng chân cơ, xác định theo bật mực định vị"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -8757,7 +8757,7 @@
               "text": "Tất cả các nội dung trên."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8807,7 +8807,7 @@
               "text": "Chỉ cần kiểm tra tường không bị nứt lớn."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -8857,7 +8857,7 @@
               "text": "Không cần nghiệm thu mốc"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8878,7 +8878,7 @@
               "text": "Không quá 28 mm."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -8903,7 +8903,7 @@
               "text": "Chỉ cần đóng lưới tại các vị trí đã xuất hiện vết nứ"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -8928,7 +8928,7 @@
               "text": "Chỉ cần tưới nước tại vị trí tiếp giáp với cột bê tông."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -8978,7 +8978,7 @@
               "text": "Dùng tay ấn mạnh vào bề mặt lớp trát."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -9099,7 +9099,7 @@
               "text": "Chỉ cần quét qua là đủ"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -9124,7 +9124,7 @@
               "text": "Chỉ thực hiện khi có yêu cầu kiểm tra, nghiệm thu từ nhà thầu"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -9174,7 +9174,7 @@
               "text": "Cửa chỉ cần đóng kín khi có nhân viên vận hành."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -9199,7 +9199,7 @@
               "text": "Không cần chèn bịt nếu đường ống đã được cố định chắc chắn."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -9224,7 +9224,7 @@
               "text": "Đảm bảo đảm kích thước và màu sắc giống thiết kế."
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -9249,7 +9249,7 @@
               "text": "Hướng mở cửa phải phù hợp quy định và hồ sơ thiết kế được duyệt."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -9274,7 +9274,7 @@
               "text": "Kiểm tra chiều rộng cửa thoát nạn, không cần kiểm tra hành lang."
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -9299,7 +9299,7 @@
               "text": "Chấp thuận nếu bố trí thêm biển chỉ dẫn thoát nạn."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -9324,7 +9324,7 @@
               "text": "Kiểm tra giới hạn chịu lửa ghi trên nhãn cửa."
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -9349,7 +9349,7 @@
               "text": "Kiểm tra kích thước ô kính, cấu tạo và phương pháp lắp đặt phù hợp báo cáo đốt mẫu và hồ sơ được duyệt."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -9374,7 +9374,7 @@
               "text": "Chuẩn bị bề mặt (vật tư, bề mặt) → bả lớp 1 → bả lớp 2 → xả bả, vệ sinh → sơn lót → sơn hoàn thiện từng lớp"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -9424,7 +9424,7 @@
               "text": "Tay nghề thợ thi công"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -9449,7 +9449,7 @@
               "text": "Không có yêu cầu cụ thể, tùy theo cán bộ giám sát"
             }
           ],
-          "correctAnswer": "C",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -9474,7 +9474,7 @@
               "text": "Chỉ kiểm tra cao độ lỗ mở/hố thăm trần"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "section": ""
         },
         {
@@ -9499,7 +9499,7 @@
               "text": "Theo yêu cầu của Chủ đầu tư"
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -9549,7 +9549,7 @@
               "text": "Lập BBHT xác nhận sự việc."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -9574,7 +9574,7 @@
               "text": "Mạch thẳng, chênh cao giữa 2 viên cạnh nhau không quá 3mm, viên sứt/nứt (nếu có) phải nằm ở vị trí khuất tầm nhìn, khó phát hiện"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "section": ""
         },
         {
@@ -9599,7 +9599,7 @@
               "text": "Chỉ cần quan sát bằng mắt thường để đánh giá hướng dốc."
             }
           ],
-          "correctAnswer": "D",
+          "correctAnswer": "B",
           "section": ""
         },
         {
@@ -9649,7 +9649,7 @@
               "text": "Màu sắc đồng đều"
             }
           ],
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "section": ""
         },
         {
@@ -9674,7 +9674,7 @@
               "text": "Nước chảy và loang thấm trên bề mặt đá"
             }
           ],
-          "correctAnswer": "A",
+          "correctAnswer": "C",
           "section": ""
         }
       ]
